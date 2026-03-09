@@ -10,6 +10,11 @@ Minimal OpenAI MCP-compatible task app that converts plain text into clean Markd
 
 The server binds to `0.0.0.0` and listens on `PORT` (default `8000`).
 
+## Environment Variables
+
+- `OPENAI_APPS_CHALLENGE` - token used by `GET /.well-known/openai-apps-challenge`
+  - If not set, server returns `PLACEHOLDER`.
+
 ## Health Check
 
 ```bash
@@ -22,7 +27,7 @@ curl -sS http://localhost:8000/health
 - `GET /privacy`
 - `GET /terms`
 - `GET /support`
-- `GET /.well-known/openai-apps-challenge` -> `IGizQCjOv5DUxm959jRx3m2lzZJtjofTkFULoCAaqLYI`
+- `GET /.well-known/openai-apps-challenge`
 
 ## MCP Endpoint
 
