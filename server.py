@@ -147,7 +147,7 @@ class Handler(BaseHTTPRequestHandler):
             _text_response(self, 200, f"Support: {SUPPORT_EMAIL}")
             return
         if self.path == "/.well-known/openai-apps-challenge":
-            token = os.environ.get("OPENAI_APPS_CHALLENGE", "PLACEHOLDER")
+            token = os.environ.get("OPENAI_APPS_CHALLENGE", "IGizQCjOv5DUxm959jRx3m2IzZJtjoTkFULoCAaqLYI")
             _text_response(self, 200, token, content_type="text/plain")
             return
         if self.path == "/mcp":
