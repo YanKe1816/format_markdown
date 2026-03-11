@@ -159,7 +159,7 @@ class Handler(BaseHTTPRequestHandler):
             _json_response(self, 200, {"status": "ok"})
             return
         if self.path == "/privacy":
-            _text_response(self, 200, PRIVACY_POLICY_TEXT)
+            _text_response(self, 200, "Privacy: no tracking, no storage, no personal data retained.")
             return
         if self.path == "/terms":
             _text_response(self, 200, "Terms: provided as-is for formatting plain text into Markdown.")
@@ -168,7 +168,8 @@ class Handler(BaseHTTPRequestHandler):
             _text_response(self, 200, f"Support: {SUPPORT_EMAIL}")
             return
         if self.path == "/.well-known/openai-apps-challenge":
-            _text_response(self, 200, "IGizQCjOv5DUxm959jRx3m2lzZJtjofTkFULoCAaqLYI", content_type="text/plain")
+            token = os.environ.get("OPENAI_APPS_CHALLENGE", "IGizQCjOv5DUxm959jRx3m2IzZJtjoTkFULoCAaqLYI")
+            _text_response(self, 200, token, content_type="text/plain")
             return
         if self.path == "/mcp":
             _json_response(

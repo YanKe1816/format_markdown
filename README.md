@@ -22,7 +22,7 @@ curl -sS http://localhost:8000/health
 - `GET /privacy`
 - `GET /terms`
 - `GET /support`
-- `GET /.well-known/openai-apps-challenge` -> `IGizQCjOv5DUxm959jRx3m2lzZJtjofTkFULoCAaqLYI`
+- `GET /.well-known/openai-apps-challenge`
 
 ## MCP Endpoint
 
