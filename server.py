@@ -16,6 +16,27 @@ APP_VERSION = "1.0.0"
 SUPPORT_EMAIL = "sidcraigau@gmail.com"
 DEFAULT_PROTOCOL_VERSION = "2024-11-05"
 
+PRIVACY_POLICY_TEXT = """Privacy Policy (Effective Date: 2026-03-11, Version: 1.0.1)
+
+This app processes user-submitted text in real time only to format it into clean Markdown.
+
+Data Handling
+- Input and output text are processed transiently during the request-response cycle.
+- The app does not store user input, output, or conversation content after the response is returned.
+- The app does not collect or store personal data.
+
+Tracking and Analytics
+- No usage tracking, profiling, cookies, or analytics are used by this app.
+
+Data Sharing
+- No user data is shared with third parties.
+- No third-party data processors are used for user content.
+
+User Rights and Data Control
+- Because data is not stored, there is no retained data to access, export, correct, or delete.
+- If you have questions, contact support at sidcraigau@gmail.com.
+"""
+
 TOOL_DEFINITIONS: List[Dict[str, Any]] = [
     {
         "name": "format_markdown",
