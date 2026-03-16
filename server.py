@@ -159,7 +159,7 @@ class Handler(BaseHTTPRequestHandler):
             _json_response(self, 200, {"status": "ok"})
             return
         if self.path == "/privacy":
-            _text_response(self, 200, "Privacy: no tracking, no storage, no personal data retained.")
+            _text_response(self, 200, PRIVACY_POLICY_TEXT)
             return
         if self.path == "/terms":
             _text_response(self, 200, "Terms: provided as-is for formatting plain text into Markdown.")
